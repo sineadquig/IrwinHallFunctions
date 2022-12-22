@@ -2,10 +2,9 @@
 #'
 #' @param n number of independent random variables uniformly distributed from 0 to 1, n is a positive integer
 #'
-#' @return an object of irwinhall class
-#' @export
+#' @return an object of irwinhall class - a list with x values and corresponding pdf and cdf values, mean, median and variance
 #'
-#' @seealso
+#' @seealso \code{\link{dirwinhall}}, \code{\link{pirwinhall}}
 #'
 #' @examples
 #' ih1 <- irwinhall(5)

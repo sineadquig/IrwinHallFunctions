@@ -12,7 +12,7 @@ pirwinhall(x, n)
 \item{n}{number of independent random variables uniformly distributed from 0 to 1, n is a positive integer}
 }
 \value{
-numeric value of cumulative density function for given x and n
+numeric value of cumulative distribution function for given x and n
 }
 \description{
 Irwin-Hall cdf

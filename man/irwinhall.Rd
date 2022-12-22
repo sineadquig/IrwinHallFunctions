@@ -10,7 +10,7 @@ irwinhall(n)
 \item{n}{number of independent random variables uniformly distributed from 0 to 1, n is a positive integer}
 }
 \value{
-an object of irwinhall class
+an object of irwinhall class - a list with x values and corresponding pdf and cdf values, mean, median and variance
 }
 \description{
 Create Irwin-Hall distribution object
@@ -18,4 +18,7 @@ Create Irwin-Hall distribution object
 \examples{
 ih1 <- irwinhall(5)
 ih1$mean
+}
+\seealso{
+\code{\link{dirwinhall}}, \code{\link{pirwinhall}}
 }

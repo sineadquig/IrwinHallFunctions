@@ -1,22 +1,24 @@
-#' Irwin-Hall distribution plot
+#' Plot Irwin-Hall distribution
 #'
-#' @param obj an object of irwinhall class
-#' @param dist "pdf" for plotting probability density function, "cdf" for cumulative distribution function
+#' @param x an object of irwinhall class
+#' @param dist "pdf" (default) for plotting probability density function, "cdf" for cumulative distribution function
 #' @param ... other parameters for plot function
 #'
-#' @return nothing
-#' @export
+#' @return nothing is returned; plot is produced
 #'
-#' @seealso
+#' @seealso \code{\link{irwinhall}}, \code{\link{dirwinhall}}, \code{\link{pirwinhall}}
 #'
 #' @examples
-#' plotIH.irwinhall(irwinhall(5),dist="pdf")
+#' plot(irwinhall(5))
+#' plot(irwinhall(10),dist="cdf")
+#' plot(irwinhall(15),col="red")
 
 #' @export
-plotIH.irwinhall <- function(obj, dist = c("pdf", "cdf"), ...) {
-  if(dist=="pdf") plot(obj$x, obj$pdf ,type="l", ...)
-  else if (dist=="cdf") plot(obj$x, obj$cdf ,type="l", ...)
+plot.irwinhall <- function(x, dist = c("pdf", "cdf"), ...) {
+  dist <- match.arg(dist)
+  if(dist=="cdf") plot(x$x, x$cdf ,type="l", ...)
+  else plot(x$x, x$pdf ,type="l", ...)
 }
 
-.S3method("plotIH", "irwinhall", plotIH.irwinhall)
+.S3method("plot", "irwinhall", plot.irwinhall)
 

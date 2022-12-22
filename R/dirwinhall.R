@@ -4,9 +4,6 @@
 #' @param n number of independent random variables uniformly distributed from 0 to 1, n is a positive integer
 #'
 #' @return numeric value of probability density function for given x and n
-#' @export
-#'
-#' @seealso
 #'
 #' @examples
 #' dirwinhall(2.2, 5)

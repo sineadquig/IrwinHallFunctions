@@ -3,10 +3,7 @@
 #' @param x random variable, a positive real number <= n
 #' @param n number of independent random variables uniformly distributed from 0 to 1, n is a positive integer
 #'
-#' @return numeric value of cumulative density function for given x and n
-#' @export
-#'
-#' @seealso
+#' @return numeric value of cumulative distribution function for given x and n
 #'
 #' @examples
 #' pirwinhall(2.2, 5)

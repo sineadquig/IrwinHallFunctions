@@ -2,20 +2,20 @@
 % Please edit documentation in R/rirwinhall.R
 \name{rirwinhall}
 \alias{rirwinhall}
-\title{Irwin-Hall randomizer}
+\title{Irwin-Hall random generator}
 \usage{
 rirwinhall(num, n)
 }
 \arguments{
-\item{num}{number of observations}
+\item{num}{number of observations to be generated}
 
 \item{n}{number of independent random variables uniformly distributed from 0 to 1, n is a positive integer}
 }
 \value{
-'num' random values from Irwin-Hall distribution for given n
+required number of random values from Irwin-Hall distribution for given n
 }
 \description{
-Irwin-Hall randomizer
+Irwin-Hall random generator
 }
 \examples{
 rirwinhall(10, 5)
