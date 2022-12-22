@@ -1,12 +1,13 @@
 Package: IrwinHallFunctions
 Type: Package
-Title: Calculate pdf and cdf of Irwin-Hall distribution. ***Needs to be updated later
+Title: Calculate pdf, cdf and random values of Irwin-Hall distribution. ***Needs to be updated later
 Version: 0.1.0
 Authors@R: c(person("John Declan", "Minnock", email="john.minnock.2020@mumail.ie", role=c("aut")),
   person("Sinead Sarah", "Quigley", email="sinead.quigley.2020@mumail.ie", role=c("aut", "cre")),
   person("Alesia", "Tratsiakova", email="alesia.tratsiakova.2020@mumail.ie", role=c("aut")))
 Description: Calculate probability density function of Irwin-Hall distribution.
     Calculate cumulative density function of Irwin-Hall distribution.
+    Calculates random values from Irwin-Hall distribution.
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true

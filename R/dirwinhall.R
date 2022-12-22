@@ -13,7 +13,7 @@
 #'
 dirwinhall <- function(x, n) {
   if(n != round(n)) stop("n must be an integer")
-  if(n < 0) stop("n must be positive")
+  if(n < 1) stop("n must be positive")
   if(x < 0) stop("x must be positive")
   if(x > n) stop("x must be less than or equal to n")
   k <- 0:abs(x)
