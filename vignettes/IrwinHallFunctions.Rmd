@@ -1,0 +1,93 @@
+---
+title: "IrwinHallFunctions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{IrwinHallFunctions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+```
+
+```{r setup}
+library(IrwinHallFunctions)
+?rnorm
+```
+
+###Introduction 
+
+IrwinHallFunctions is a package which generates random values and calculates statistics for the Irwin-Hall distribution. The Irwin–Hall distribution is the continuous probability distribution for the sum of n independent and identically distributed U(0, 1) random variables. Five functions are provided:
+
+(1): 'irwinhall()': for generating an object of irwinhall class,
+(2): 'dirwinhall()': a method for calculating the probability density function of given x and n,
+(3): 'pirwinhall()': a method for calculating the cumulative distribution function of given x and n, 
+(4): 'rirwinhall()': a method for generating a desired number of random values from Irwin-Hall distribution for given n. 
+(5): 'plotIH.irwinhall()': a method for producing visualizations of the pdf and cdf.
+
+##Installation 
+
+IrwinHallFunctions will run in Windows, Mac OS X, or Linux. To install it you first need to install R. Installing RStudio as a nice desktop environment for using R is also recommended.
+Once in R you can type at the R command prompt:
+```{r, eval=FALSE}
+install.packages('devtools')
+devtools::install_github('sineadquig/IrwinHallFunctions')
+```
+
+to install the latest development version of the package from the __IrwinHallFunctions__ [GitHub page](https://github.com/sineadquig/IrwinHallFunctions). 
+
+In either case, if you then type:
+
+```{r, eval=FALSE}
+library(IrwinHallFunctions)
+```
+
+it will load in all the aforementioned __IrwinHallFunctions__ functions.
+
+Some features may not yet be fully tested, and occasionally this version might be liable to break when it is in the process of being updated. If you find bugs or want to suggest new features please visit the [GitHub issues page](https://github.com/sineadquig/IrwinHallFunctions/issues). 
+
+## `irwinhall()`
+
+This function takes in an integer n, which must be positive. The output will be an object class which will contain a list with x values and their corresponding pdf and cdf, mean, median and variance values. In the examples below, an object of irwinhall class of five independent random variables is returned and the pdf is available. 
+
+```{r}
+IH5 <- irwinhall(5)
+ IH5$pdf
+```
+## 'dirwinhall()' 
+
+This function takes in a real number x and an integer n,, which must both be positive. X must be less than or equal to n. The probability density function is calculated and returned as a numeric value. 
+
+```{r}
+IHPDF<-dirwinhall(3.4, 10)
+IHPDF
+```
+
+## 'pirwinhall()' 
+
+This function takes in a real number x and an integer n, which must both be positive. X must be less than or equal to n. The Cumulative distribution function is calculated and returned as a numeric value. 
+
+```{r}
+IHCDF<-pirwinhall(4.1, 8)
+IHCDF
+```
+
+## 'rirwinhall()'
+
+This function generates a desired amount (num) of random values from Irwin-Hall distribution for given positive integer n. The required number of random values from Irwin-Hall distribution is returned. 
+```{r}
+IHRG<-rirwinhall(10, 5)
+IHRG
+```
+
+## 'plotIH.irwinhall()'
+This function produces a nice plot of the pdf and the cdf as calculated in 'irwinhall()'. Nothing is returned as the plot is produced. 
+```{r}
+plot(irwinhall(10),dist="cdf")
+```
+

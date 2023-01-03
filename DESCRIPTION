@@ -3,7 +3,7 @@ Type: Package
 Title: Calculate pdf, cdf and other statistics of Irwin-Hall distribution. Generates random values. Plots pdf and cdf
 Version: 0.2.0
 Authors@R: c(person("John Declan", "Minnock", email="john.minnock.2020@mumail.ie", role=c("aut")),
-  person("Sinead Sarah", "Quigley", email="sinead.quigley.2020@mumail.ie", role=c("aut", "cre")),
+  person("Sinead", "Quigley", email="sinead.quigley.2020@mumail.ie", role=c("aut", "cre")),
   person("Alesia", "Tratsiakova", email="alesia.tratsiakova.2020@mumail.ie", role=c("aut")))
 Description: Calculate probability density function of Irwin-Hall distribution.
     Calculate cumulative density function of Irwin-Hall distribution.
@@ -16,3 +16,7 @@ LazyData: true
 Depends: R (>= 4.2.0)
 BugReports: https://github.com/sineadquig/IrwinHallFunctions.git
 RoxygenNote: 7.2.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
